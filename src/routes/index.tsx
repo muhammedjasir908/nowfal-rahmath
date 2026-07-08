@@ -19,7 +19,6 @@ import {
   Copy,
   Check,
 } from "lucide-react";
-import leaves from "@/assets/leaves.png";
 import { FloatingPetals, OrnateFlower, CornerBloom } from "@/components/decorations";
 
 export const Route = createFileRoute("/")({
@@ -364,14 +363,17 @@ function InvitationCard() {
 
   return (
     <div className="relative mx-auto w-full max-w-xl">
-      <div className="relative overflow-hidden rounded-[1.25rem] bg-[oklch(0.98_0.02_92)] p-2 shadow-elegant animate-bloom">
-        <div className="relative rounded-[1rem] border border-gold/50 px-6 py-10 md:px-10 md:py-14">
-          <OrnateFlower className="pointer-events-none absolute -top-3 -left-3 opacity-70 hover-sway animate-spin-slow" size={40} />
-          <OrnateFlower className="pointer-events-none absolute -top-3 -right-3 opacity-70 hover-sway animate-spin-slow" size={40} />
-          <OrnateFlower className="pointer-events-none absolute -bottom-3 -left-3 opacity-70 hover-sway animate-spin-slow" size={40} />
-          <OrnateFlower className="pointer-events-none absolute -bottom-3 -right-3 opacity-70 hover-sway animate-spin-slow" size={40} />
+      <div className="relative overflow-hidden rounded-[1.25rem] bg-card p-2 shadow-elegant animate-bloom">
+        <div className="relative overflow-hidden rounded-[1rem] border border-gold/50">
+          <img src="/couple-bg.jpg" alt="Couple" className="h-64 w-full object-cover object-center md:h-80" />
+          
+          <div className="relative bg-card px-6 py-10 md:px-10 md:py-14">
+            <OrnateFlower className="pointer-events-none absolute -top-3 -left-3 opacity-70 hover-sway animate-spin-slow" size={40} />
+            <OrnateFlower className="pointer-events-none absolute -top-3 -right-3 opacity-70 hover-sway animate-spin-slow" size={40} />
+            <OrnateFlower className="pointer-events-none absolute -bottom-3 -left-3 opacity-70 hover-sway animate-spin-slow" size={40} />
+            <OrnateFlower className="pointer-events-none absolute -bottom-3 -right-3 opacity-70 hover-sway animate-spin-slow" size={40} />
 
-          <div className="text-center">
+            <div className="text-center">
             <p className="font-arabic text-2xl leading-loose text-emerald-deep md:text-3xl">
               بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
             </p>
@@ -444,7 +446,8 @@ function InvitationCard() {
         </div>
       </div>
     </div>
-  );
+  </div>
+);
 }
 
 /* ---------------- Splash ---------------- */
@@ -452,7 +455,7 @@ function InvitationCard() {
 function Splash({ onEnter }: { onEnter: () => void }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-background animate-fade-in">
-      <img src={leaves} alt="" className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-20" />
+      <img src="/couple-bg.jpg" alt="" className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-10 md:opacity-20 blur-sm" />
       <FloatingPetals />
       <OrnateFlower className="absolute left-6 top-6 hover-sway animate-spin-slow" size={80} />
       <OrnateFlower className="absolute bottom-6 right-6 hover-sway animate-spin-slow" size={80} />
@@ -525,12 +528,8 @@ function Invitation() {
   return (
     <main className="relative min-h-screen overflow-hidden">
       {/* Ambient decor */}
-      <img src={leaves} alt="" aria-hidden className="pointer-events-none fixed -top-20 -left-20 h-96 w-96 opacity-40 animate-float-slow" />
-      <img src={leaves} alt="" aria-hidden className="pointer-events-none fixed -bottom-20 -right-20 h-96 w-96 rotate-180 opacity-40 animate-float-slow" style={{ animationDelay: "2s" }} />
-      <img src={leaves} alt="" aria-hidden className="pointer-events-none fixed top-1/3 -right-24 h-72 w-72 opacity-25 animate-sway" />
-      <img src={leaves} alt="" aria-hidden className="pointer-events-none fixed top-2/3 -left-24 h-72 w-72 rotate-90 opacity-25 animate-sway" style={{ animationDelay: "1.5s" }} />
-      <CornerBloom className="pointer-events-none fixed top-0 left-0 h-48 w-48 md:h-64 md:w-64" />
-      <CornerBloom className="pointer-events-none fixed bottom-0 right-0 h-48 w-48 md:h-64 md:w-64 rotate-180" />
+      <CornerBloom className="pointer-events-none fixed top-0 left-0 h-48 w-48 md:h-64 md:w-64 opacity-60" />
+      <CornerBloom className="pointer-events-none fixed bottom-0 right-0 h-48 w-48 md:h-64 md:w-64 rotate-180 opacity-60" />
 
       {entered && <FloatingPetals />}
       {!entered && <Splash onEnter={enter} />}
@@ -662,7 +661,7 @@ function Invitation() {
       {/* CLOSING */}
       <Section className="pb-28">
         <div className="relative overflow-hidden rounded-[2rem] gradient-emerald p-10 text-center text-primary-foreground shadow-elegant md:p-14">
-          <img src={leaves} alt="" aria-hidden className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-10" />
+          <img src="/couple-bg.jpg" alt="" aria-hidden className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-15 mix-blend-overlay" />
           <Mail className="mx-auto mb-4 h-10 w-10 text-gold" strokeWidth={1.2} />
           <p className="text-xs uppercase tracking-[0.4em] text-gold">A Warm Invitation</p>
           <p className="mt-6 font-display text-2xl leading-relaxed md:text-3xl">

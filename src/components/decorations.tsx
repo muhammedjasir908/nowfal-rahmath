@@ -39,13 +39,13 @@ function Sparkle({ top, left, delay, size = 10 }: { top: string; left: string; d
 export function FloatingPetals() {
   const petals = useMemo(
     () =>
-      Array.from({ length: 14 }).map((_, i) => ({
+      Array.from({ length: 30 }).map((_, i) => ({
         id: i,
-        delay: Math.random() * 12,
+        delay: Math.random() * 18,
         duration: 12 + Math.random() * 14,
         left: Math.random() * 100,
         size: 14 + Math.random() * 22,
-        hue: ["#7d9b76", "#a8c0a0", "#c9a84c", "#e8c07a", "#5a8a5c"][i % 5],
+        hue: ["#e91e63", "#d81b60", "#ff4081", "#f06292", "#ad1457"][i % 5],
       })),
     [],
   );
