@@ -355,93 +355,37 @@ function ActionsRow() {
 /* ---------------- Invitation letter card ---------------- */
 
 function InvitationCard() {
-  const date = WEDDING_DATE.toLocaleDateString("en-GB", {
-    day: "2-digit",
-    month: "short",
-    year: "numeric",
-  });
 
   return (
     <div className="relative mx-auto w-full max-w-xl">
       <div className="relative overflow-hidden rounded-[1.25rem] bg-card p-2 shadow-elegant animate-bloom">
-        <div className="relative overflow-hidden rounded-[1rem] border border-gold/50">
-          <img src="/couple-bg.jpg" alt="Couple" className="h-64 w-full object-cover object-center md:h-80" />
+        <div className="relative overflow-hidden rounded-[1rem] border border-gold/50 min-h-[700px] flex flex-col">
+          <img src="/couple-bg.jpg" alt="" className="pointer-events-none absolute inset-0 h-full w-full object-cover object-bottom" />
           
-          <div className="relative bg-card px-6 py-10 md:px-10 md:py-14">
+          <div className="relative px-6 py-12 md:px-10 md:py-16 flex-1 flex flex-col justify-start">
             <OrnateFlower className="pointer-events-none absolute -top-3 -left-3 opacity-70 hover-sway animate-spin-slow" size={40} />
             <OrnateFlower className="pointer-events-none absolute -top-3 -right-3 opacity-70 hover-sway animate-spin-slow" size={40} />
-            <OrnateFlower className="pointer-events-none absolute -bottom-3 -left-3 opacity-70 hover-sway animate-spin-slow" size={40} />
-            <OrnateFlower className="pointer-events-none absolute -bottom-3 -right-3 opacity-70 hover-sway animate-spin-slow" size={40} />
-
+            
             <div className="text-center">
-            <p className="font-arabic text-2xl leading-loose text-emerald-deep md:text-3xl">
-              بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
-            </p>
-            <p className="mt-3 text-[13px] italic text-muted-foreground">
-              With the blessings of Almighty Allah
-            </p>
+              <p className="font-arabic text-3xl leading-loose text-emerald-deep md:text-4xl">
+                بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+              </p>
+              <p className="mt-2 text-[13px] italic text-emerald-deep/80">
+                With the blessings of Almighty Allah
+              </p>
 
-            <div className="mx-auto my-7 h-px w-24 bg-gold/40" />
+              <div className="mx-auto my-7 h-px w-24 bg-gold/40" />
 
-            <p className="text-[13px] leading-7 text-foreground/85 md:text-sm">
-              Mr. Mohammed Sali &amp; Mrs. Shahina Sali
-              <br />
-              <span className="italic text-muted-foreground">together with</span>
-              <br />
-              Mr. Abdul Rahim &amp; Mrs. Beena Rahim
-            </p>
+              <h2 className="mt-8 font-display text-2xl font-semibold text-emerald-deep md:text-3xl hover-title">
+                Wedding Invitation
+              </h2>
 
-            <p className="mt-5 text-[12px] tracking-wide text-muted-foreground">
-              warmly invite you to the Nikah ceremony
-            </p>
-
-            <h2 className="mt-4 font-display text-2xl font-semibold text-emerald-deep md:text-3xl hover-title">
-              Wedding Invitation
-            </h2>
-
-            <div className="mt-8">
-              <p className="font-script text-4xl leading-tight text-emerald-deep md:text-5xl">Nowfal</p>
-              <p className="my-2 font-script text-2xl text-gold md:text-3xl">&amp;</p>
-              <p className="font-script text-4xl leading-tight text-emerald-deep md:text-5xl">Rahmath Niza</p>
-            </div>
-
-            <p className="mt-8 font-display text-sm italic text-muted-foreground">Save the Date</p>
-
-            <div className="mx-auto mt-3 h-px w-full max-w-sm bg-gold/40" />
-
-            <div className="mx-auto mt-5 grid max-w-sm grid-cols-2 gap-4">
-              <div className="text-center">
-                <p className="text-[10px] uppercase tracking-[0.35em] text-gold">Nikah</p>
-                <p className="mt-2 font-display text-xl text-emerald-deep md:text-2xl">11:30 AM</p>
-              </div>
-              <div className="border-l border-gold/30 text-center">
-                <p className="text-[10px] uppercase tracking-[0.35em] text-gold">Date</p>
-                <p className="mt-2 font-display text-xl text-emerald-deep md:text-2xl">{date}</p>
+              <div className="mt-8">
+                <p className="font-script text-5xl leading-tight text-emerald-deep md:text-6xl">Nowfal</p>
+                <p className="my-3 font-script text-3xl text-gold md:text-4xl">&amp;</p>
+                <p className="font-script text-5xl leading-tight text-emerald-deep md:text-6xl">Rahmath Niza</p>
               </div>
             </div>
-
-            <div className="mx-auto mt-6 h-px w-full max-w-sm bg-gold/40" />
-
-            <div className="mt-8">
-              <p className="font-display text-lg text-emerald-deep md:text-xl">
-                Kallivayalil Pappan Memorial
-                <br />
-                Public School Auditorium
-              </p>
-              <p className="mt-1 text-[12px] italic text-muted-foreground">
-                Mundakayam East P.O, Idukki
-              </p>
-            </div>
-
-            <div className="mt-8 flex items-center justify-center gap-2 text-gold/70">
-              <span className="h-px w-8 bg-gold/40" />
-              <Heart className="h-3 w-3" fill="currentColor" />
-              <span className="h-px w-8 bg-gold/40" />
-            </div>
-
-            <p className="mt-4 font-arabic text-base text-emerald-deep/80">
-              جَزَاكُمُ اللَّهُ خَيْرًا
-            </p>
           </div>
         </div>
       </div>
