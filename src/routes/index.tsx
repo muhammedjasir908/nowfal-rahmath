@@ -27,9 +27,8 @@ export const Route = createFileRoute("/")({
 });
 
 const WEDDING_DATE = new Date("2026-08-16T11:30:00+05:30");
-// Arabic wedding nasheed (Tala' al-Badru 'Alayna – classic wedding welcome song)
-const WEDDING_BGM =
-  "https://ia903102.us.archive.org/22/items/TalaAlBadruAlayna_201811/Tala%20Al-Badru%20Alayna.mp3";
+// Arabic wedding bgm (Place your audio file as public/bgm.mp3)
+const WEDDING_BGM = "/bgm.mp3";
 
 const VENUE_QUERY = encodeURIComponent(
   "Kallivayalil Pappan Memorial Public School Auditorium, Mundakayam East, Idukki, Kerala",
