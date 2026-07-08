@@ -390,10 +390,8 @@ function InvitationCard() {
         </div>
       </div>
     </div>
-  </div>
-);
+  );
 }
-
 /* ---------------- Splash ---------------- */
 
 function Splash({ onEnter }: { onEnter: () => void }) {
