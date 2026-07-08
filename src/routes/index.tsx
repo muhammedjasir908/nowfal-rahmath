@@ -362,28 +362,28 @@ function InvitationCard() {
         <div className="relative overflow-hidden rounded-[1rem] border border-gold/50 min-h-[700px] flex flex-col">
           <img src="/couple-bg.jpg" alt="" className="pointer-events-none absolute inset-0 h-full w-full object-cover object-bottom" />
           
-          <div className="relative px-6 py-12 md:px-10 md:py-16 flex-1 flex flex-col justify-start">
+          <div className="relative px-6 pt-8 pb-4 md:px-10 md:pt-10 flex-1 flex flex-col justify-start">
             <OrnateFlower className="pointer-events-none absolute -top-3 -left-3 opacity-70 hover-sway animate-spin-slow" size={40} />
             <OrnateFlower className="pointer-events-none absolute -top-3 -right-3 opacity-70 hover-sway animate-spin-slow" size={40} />
             
             <div className="text-center">
-              <p className="font-arabic text-3xl leading-loose text-emerald-deep md:text-4xl">
+              <p className="font-arabic text-2xl leading-loose text-emerald-deep md:text-3xl">
                 بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
               </p>
-              <p className="mt-2 text-[13px] italic text-emerald-deep/80">
+              <p className="mt-1 text-[12px] italic text-emerald-deep/80">
                 With the blessings of Almighty Allah
               </p>
 
-              <div className="mx-auto my-7 h-px w-24 bg-gold/40" />
+              <div className="mx-auto my-4 h-px w-24 bg-gold/40" />
 
-              <h2 className="mt-8 font-display text-2xl font-semibold text-emerald-deep md:text-3xl hover-title">
+              <h2 className="mt-4 font-display text-xl font-semibold text-emerald-deep md:text-2xl hover-title">
                 Wedding Invitation
               </h2>
 
-              <div className="mt-8">
-                <p className="font-script text-5xl leading-tight text-emerald-deep md:text-6xl">Nowfal</p>
-                <p className="my-3 font-script text-3xl text-gold md:text-4xl">&amp;</p>
-                <p className="font-script text-5xl leading-tight text-emerald-deep md:text-6xl">Rahmath Niza</p>
+              <div className="mt-4">
+                <p className="font-script text-4xl leading-tight text-emerald-deep md:text-5xl">Nowfal</p>
+                <p className="my-1 font-script text-2xl text-gold md:text-3xl">&amp;</p>
+                <p className="font-script text-4xl leading-tight text-emerald-deep md:text-5xl">Rahmath Niza</p>
               </div>
             </div>
           </div>
