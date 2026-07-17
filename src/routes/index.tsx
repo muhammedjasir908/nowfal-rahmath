@@ -392,6 +392,163 @@ function InvitationCard() {
     </div>
   );
 }
+
+/* ---------------- Dress Code ---------------- */
+
+function DressCode() {
+  return (
+    <Section className="py-10">
+      <div className="mb-10 flex flex-col items-center text-center px-4">
+        <div className="flex items-center gap-4 text-gold mb-4">
+          <Sparkles className="h-4 w-4" />
+          <p className="text-sm uppercase tracking-[0.4em]">Dress Code</p>
+          <Sparkles className="h-4 w-4" />
+        </div>
+        <h2 className="font-display text-4xl font-light text-emerald-deep md:text-5xl hover-title">
+          Come Dressed in Harmony
+        </h2>
+        <div className="divider-ornament my-6"><Heart className="h-3 w-3" fill="currentColor" /></div>
+        <p className="max-w-2xl text-[15px] italic leading-relaxed text-muted-foreground/90">
+          To create a beautifully unified celebration, we warmly invite our guests to embrace the colours of our day. Your care in dressing within this palette will add to the joy and elegance of the occasion.
+        </p>
+      </div>
+
+      <div className="grid gap-10 lg:grid-cols-2">
+        {/* Ladies Section */}
+        <div className="relative overflow-hidden rounded-[2rem] border border-[#f3a1b8]/40 bg-gradient-to-br from-[#fdf5f6] to-[#fbf0f2] p-2 shadow-card-soft">
+          <div className="relative grid md:grid-cols-2 overflow-hidden rounded-[1.5rem] bg-white/50 backdrop-blur-sm">
+            <div className="p-8 md:p-12 flex flex-col justify-center">
+              <div className="mb-6 flex items-center gap-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#f3a1b8]/20 text-[#e73b6b]">
+                  <OrnateFlower size={24} className="animate-spin-slow" />
+                </div>
+                <div>
+                  <p className="text-[10px] font-medium uppercase tracking-[0.3em] text-muted-foreground">For the Ladies</p>
+                  <h3 className="font-display text-2xl text-[#b83264]">Rose &amp; Crimson Palette</h3>
+                </div>
+              </div>
+              
+              {/* Ladies Colors */}
+              <div className="flex overflow-hidden rounded-xl border border-black/5 shadow-sm">
+                {[
+                  { name: "Deep Rose", hex: "#A63D63" },
+                  { name: "Crimson Bloom", hex: "#E73B6B" },
+                  { name: "Blush Petal", hex: "#F26B8E" },
+                  { name: "Soft Carnation", hex: "#F3A1B8" },
+                  { name: "Pastel Pink", hex: "#F7C6D9" },
+                  { name: "Berry Velvet", hex: "#B83264" },
+                ].map((color) => (
+                  <div key={color.name} className="group relative flex-1">
+                    <div className="h-20 w-full transition-transform hover:scale-105" style={{ backgroundColor: color.hex }} />
+                  </div>
+                ))}
+              </div>
+              <div className="mt-8 flex justify-between px-1 text-center">
+                 {[
+                  { name: "Deep Rose", hex: "#A63D63" },
+                  { name: "Crimson Bloom", hex: "#E73B6B" },
+                  { name: "Blush Petal", hex: "#F26B8E" },
+                  { name: "Soft Carnation", hex: "#F3A1B8" },
+                  { name: "Pastel Pink", hex: "#F7C6D9" },
+                  { name: "Berry Velvet", hex: "#B83264" },
+                ].map((color) => (
+                  <div key={color.name} className="flex-1 px-1">
+                    <p className="text-[8px] uppercase tracking-wider text-foreground/80 md:text-[9px]">
+                      {color.name.split(' ').map((word, i) => (
+                        <span key={i} className="block">{word}</span>
+                      ))}
+                    </p>
+                    <p className="mt-1 text-[8px] text-muted-foreground">{color.hex}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="divider-ornament my-6"><Heart className="h-3 w-3 text-[#f3a1b8]" fill="currentColor" /></div>
+              
+              <p className="text-center font-display text-[17px] italic leading-relaxed text-muted-foreground md:text-lg">
+                From deep berry to the softest blush — sarees, gowns, churidars, abayas and all elegant attire are warmly welcome.
+              </p>
+            </div>
+            
+            <div className="relative min-h-[300px] md:min-h-full">
+               <img src="/ladies-dress-code.jpg" alt="Ladies Dress Code Reference" className="absolute inset-0 h-full w-full object-cover object-center" />
+            </div>
+          </div>
+        </div>
+
+        {/* Gentlemen Section */}
+        <div className="relative overflow-hidden rounded-[2rem] border border-gold/30 bg-gradient-to-br from-[#fbf9f5] to-[#f5f1e8] p-2 shadow-card-soft">
+          <div className="relative grid md:grid-cols-2 overflow-hidden rounded-[1.5rem] bg-white/50 backdrop-blur-sm">
+            
+            <div className="relative min-h-[300px] md:min-h-full order-last md:order-first">
+               <img src="/gents-dress-code.jpg" alt="Gentlemen Dress Code Reference" className="absolute inset-0 h-full w-full object-cover object-center" />
+            </div>
+
+            <div className="p-8 md:p-12 flex flex-col justify-center">
+              <div className="mb-6 flex items-center gap-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gold/10 text-gold">
+                  <Heart size={20} fill="currentColor" />
+                </div>
+                <div>
+                  <p className="text-[10px] font-medium uppercase tracking-[0.3em] text-muted-foreground">For the Gentlemen</p>
+                  <h3 className="font-display text-2xl text-[#8b7355]">Ivory &amp; Cream Palette</h3>
+                </div>
+              </div>
+              
+              {/* Gents Colors */}
+              <div className="flex overflow-hidden rounded-xl border border-black/5 shadow-sm">
+                {[
+                  { name: "Ivory", hex: "#FFF2E1" },
+                  { name: "Cream", hex: "#F7EBD1" },
+                  { name: "Champagne", hex: "#EEDFC2" },
+                  { name: "Pearl White", hex: "#F8F6F0" },
+                  { name: "Off White", hex: "#FBFAF6" },
+                ].map((color) => (
+                  <div key={color.name} className="group relative flex-1">
+                    <div className="h-20 w-full transition-transform hover:scale-105" style={{ backgroundColor: color.hex }} />
+                  </div>
+                ))}
+              </div>
+              
+              <div className="mt-8 flex justify-between px-1 text-center">
+                 {[
+                  { name: "Ivory", hex: "#FFF2E1" },
+                  { name: "Cream", hex: "#F7EBD1" },
+                  { name: "Champagne", hex: "#EEDFC2" },
+                  { name: "Pearl White", hex: "#F8F6F0" },
+                  { name: "Off White", hex: "#FBFAF6" },
+                ].map((color) => (
+                  <div key={color.name} className="flex-1 px-1">
+                    <p className="text-[8px] uppercase tracking-wider text-foreground/80 md:text-[9px]">
+                      {color.name.split(' ').map((word, i) => (
+                        <span key={i} className="block">{word}</span>
+                      ))}
+                    </p>
+                    <p className="mt-1 text-[8px] text-muted-foreground">{color.hex}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="divider-ornament my-6"><Heart className="h-3 w-3 text-gold/40" fill="currentColor" /></div>
+              
+              <p className="text-center font-display text-[17px] italic leading-relaxed text-muted-foreground md:text-lg">
+                Ivory, cream and elegant off-white shades — perfect for shirts, kurtas, sherwanis and all formal wear.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-12 flex items-center justify-center gap-6 text-gold">
+         <Sparkles className="h-4 w-4" />
+         <p className="text-[13px] italic text-muted-foreground">Thank you for celebrating with us in style and in harmony.</p>
+         <Sparkles className="h-4 w-4" />
+      </div>
+    </Section>
+  );
+}
+
 /* ---------------- Splash ---------------- */
 
 function Splash({ onEnter }: { onEnter: () => void }) {
@@ -572,6 +729,9 @@ function Invitation() {
           </div>
         </div>
       </Section>
+
+      {/* DRESS CODE */}
+      <DressCode />
 
       {/* LOCATIONS */}
       <Section>
